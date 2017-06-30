@@ -1,0 +1,8 @@
+#include <iostream.
+#include <windows.h>
+
+int main(int argc, char **argv) {
+  system("@echo off netuse \\192.168.31.11 /user:Administrator 6.12rgr84u");
+
+  return 0;
+}

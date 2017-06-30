@@ -1,0 +1,61 @@
+#include <iostream>
+#include <fstream>
+#include <windows.h>
+
+/**
+ * All file manipulations are done with system calls to allow the shell
+ * to handle wildcards effectively. Setting c_str paths is more effecient, 
+ * but the wildcard all you to ignore the date-time stamp for mass deletion.
+ * Version 0.0.1 - Clears the C:\Naxml\Reports directory of all files
+ * Version 0.0.2 - Removes PL*.zip files and PE*.xml files 
+ * Version 0.0.3 - Compensated for TCC and SD card configuration
+ */
+
+// Prototypes, because compilers are stupid and nobody wants to scroll down
+// to find the main().
+void clear_reports();
+void del_plzip();
+void del_pe();
+
+int main (int argc, char ** argv)
+{
+  clear_reports();
+  del_plzip();
+  del_pe();
+
+  return 0;
+}
+
+/**
+ * Function clear_reports looks into C:\Naxml\Reports 
+ * and deletes any files that are contained in that directory.
+ */
+
+void clear_reports()
+{
+  system("del /F /Q /Y C:\\Naxml\\Reports\\*.*");
+}
+
+/**
+ * Function del_plzip looks into C:\Program Files\Pinnacle\Oaswin 
+ * and E\Pinnacle\Oaswin and deletes any PLZIP files that are
+ *  contained in that directory.
+ */
+
+void del_plzip()
+{
+  system("del /F /Q /Y \"C:\\Program Files\\Pinnacle\\Oaswin\\PL*.zip\"");
+  system("del /F /Q /Y E:\\Pinnacle\\Oaswin\\PL*.zip");
+}
+
+/**
+ * Function del_pe looks into C:\Program Files\Pinnacle\Oaswin\POSExport 
+ * and E:\Pinnacle\Oaswin\POSExport\New and deletes any PE files that are
+ *  contained in that directory.
+ */
+
+void del_pe()
+{
+  system("del /F /Q /Y \"C:\\Program Files\\Pinnacle\\Oaswin\\POSExport\\New\\*.xml\"");
+  system("del /F /Q /Y E:\\Pinnacle\\Oaswin\\POSExport\\New\\*.xml");
+}

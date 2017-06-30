@@ -1,0 +1,17 @@
+#include <iostream>
+#include <windows.h>
+#include <sstream>
+
+int main(int argc, char **argv)
+{
+  std::string store;
+  std::cout << "Enter the store number: ";
+  getline (std::cin, store);
+  std::string cmd("psexec \\\\fce-");
+  cmd += store;
+  cmd += " -u helpdesk -p LimeCoke taskkill /f /im MWSStore.exe";
+  
+  system(cmd.c_str());
+
+  return 0;
+}
