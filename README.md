@@ -1,8 +1,8 @@
-*****************************************************************
-* Please read for information about the programs and .dbf files *
-* in this directory. The .dbf files in DBF_Repo CANNOT be used  *
-*                       at a store.                             *
-*****************************************************************
+***************************************************************
+ Please read for information about the programs and .dbf files 
+ in this directory. The .dbf files in DBF_Repo CANNOT be used  
+                       at a store.                             
+***************************************************************
 
 The .dbf files contained in DBF_Repo cannot be used in any store
 environment using programs made by the Pinnacle corp. The .dbf
@@ -12,9 +12,9 @@ and therefore have a flag that makes them unreadable in MWS Store.
 These files are for editing and research ONLY.
 
 
-*************************************************
-* reset_mws.exe Version - 0.0.3 - Commander POS *
-*************************************************
+**********************************************
+reset_mws.exe Version - 0.0.3 - Commander POS 
+**********************************************
 
 This program enters and clears the C:\Naxml\Reports\ directory,
 deletes any PL*.zip files that may be contained in the
@@ -32,9 +32,9 @@ to allow reset_mws.exe to be called at the beginning of Poll
 Register Day.
 
 
-**************************************************
-* datadict.exe Version - 0.1.0 - POS Independent *
-**************************************************
+***********************************************
+datadict.exe Version - 0.1.0 - POS Independent
+***********************************************
 
 This program uses two similar functions to account for the
 different SD Card configurations present. The first step checks
